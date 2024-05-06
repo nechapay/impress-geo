@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <title>Визитная карточка клуба</title>
+
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    <link href="css/impress-common.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="img/logo2.png" />
+  </head>
+  <body class="impress-not-supported">
+    <div class="fallback-message">
+      <p>
+        Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified
+        version of this presentation.
+      </p>
+      <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+    </div>
+    <div
+      id="impress"
+      data-transition-duration="1000"
+      data-width="1024"
+      data-height="768"
+      data-max-scale="3"
+      data-min-scale="0"
+      data-perspective="1000"
+      data-autoplay="0"
+    >
+      <div id="start" class="step" data-x="-2000" data-y="-1500">
+        <div class="first-slide">
+          <img src="img/001.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="step" data-x="0" data-y="-1500" data-rotate-y="90">
+        <div class="first-slide">
+          <img src="img/002.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="step" data-x="2000" data-y="-1500" data-rotate-y="180">
+        <div class="first-slide">
+          <img src="img/003.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="step" data-x="4000" data-y="-1500" data-rotate-y="270">
+        <div class="first-slide">
+          <img src="img/004.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="step" data-x="3000" data-y="0" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+        <div class="first-slide">
+          <img src="img/005.jpg" alt="" />
+        </div>
+      </div>
+      <div id="overview" class="step" data-x="1000" data-y="-500" data-z="0" data-scale="6"></div>
+    </div>
+    <div id="impress-toolbar"></div>
+    <div class="hint">
+      <p>Используйте пробел или стрелки для навигации. <br /></p>
+    </div>
+    <script>
+      if ('ontouchstart' in document.documentElement) {
+        document.querySelector('.hint').innerHTML = '<p>Swipe left or right to navigate</p>'
+      }
+    </script>
+    <script src="js/impress.js"></script>
+    <script>
+      impress().init()
+    </script>
+  </body>
+</html>
